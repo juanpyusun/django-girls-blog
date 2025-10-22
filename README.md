@@ -1,4 +1,5 @@
 # Proyecto Django
+
 ## Índice
 
 - [Proyecto Django](#proyecto-django)
@@ -27,7 +28,23 @@
     - configuracion de la ruta estatica 'STATIC_ROOT = BASE_DIR / 'static''
     - configuracion de la base de datos 'DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3', 'NAME': BASE_DIR / 'db.sqlite3',}}'
     - Creacion de la base de datos con 'python manage.py migrate', esta ya está definida por defecto en django
-11. Ejecucion del servidor de desarrollo 'python manage.py runserver' y verificacion en el navegador en la direccion 'http://127.0.0.1:8000/', debe aparecer la pagina de bienvenida de django, ademas podemos acceder a la administracion en 'http://127.0.0.1:8000/admin/', donde podremos gestionar nuestro sitio.
+11. Ejecucion del servidor de desarrollo 'python manage.py runserver' y verificacion en el navegador en la direccion '<http://127.0.0.1:8000/>', debe aparecer la pagina de bienvenida de django, ademas podemos acceder a la administracion en '<http://127.0.0.1:8000/admin/>', donde podremos gestionar nuestro sitio.
 12. Configuracion usuario administrador con 'python manage.py createsuperuser' y seguir los pasos para crear el usuario.
 
 ## Descripcion del proyecto
+
+Este proyecto es un blog basico desarrollado con Django, que permite a los usuarios crear, editar y eliminar publicaciones. Ademas, cuenta con un sistema de autenticacion para gestionar el acceso a la administracion del sitio.
+
+1. Crear aplicacion principal del blog con 'python manage.py startapp blog'
+2. Agregar la aplicacion al proyecto en config/settings.py en la seccion INSTALLED_APPS
+3. Crear el modelo Post en blog/models.py como una clase que hereda de models.Model con los siguientes campos:
+    - author: ForeignKey al modelo User de Django (ya creado)
+    - title: CharField con max_length=200
+    - text: TextField para el contenido del post
+    - created_date: DateTimeField con auto_now_add=True
+    - published_date: DateTimeField con null=True, blank=True
+    - definir el metodo publish para publicar el post
+    - definir el metodo __str__ para representar el post por su titulo
+4. añadir el modelo Post a la administracion de Django en blog/admin.py
+5. crear y aplicar migraciones con 'python manage.py makemigrations blog' y 'python manage.py migrate blog'
+6. comprobar en la administracion de Django que el modelo Post aparece correctamente y se pueden crear, editar y eliminar posts.
