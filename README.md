@@ -27,8 +27,8 @@
     - cambio de idioma a español colombiano `LANGUAGE_CODE = 'es-CO'`
     - configuracion de zona horaria `TIME_ZONE = 'America/Bogota'`
     - configuracion de hosts permitidos `ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']`
-    - configuracion de la ruta estatica `STATIC_ROOT = BASE_DIR / `static``
-    - configuracion de la base de datos `DATABASES = {`default`: {`ENGINE`: `django.db.backends.sqlite3`, `NAME`: BASE_DIR / `db.sqlite3`,}}`
+    - configuracion de la ruta estatica `STATIC_ROOT = BASE_DIR /'static'`
+    - configuracion de la base de datos `DATABASES = {`default`: 'ENGINE': 'django.db.backends.sqlite3', 'NAME': BASE_DIR / 'db.sqlite3',}}`
     - Creacion de la base de datos con `python manage.py migrate`, esta ya está definida por defecto en django
 11. Ejecucion del servidor de desarrollo `python manage.py runserver` y verificacion en el navegador en la direccion `<http://127.0.0.1:8000/>`, debe aparecer la pagina de bienvenida de django, ademas podemos acceder a la administracion en `<http://127.0.0.1:8000/admin/>`, donde podremos gestionar nuestro sitio.
 12. Configuracion usuario administrador con `python manage.py createsuperuser` y seguir los pasos para crear el usuario.
@@ -64,4 +64,5 @@ Este proyecto es un blog basico desarrollado con Django, que permite a los usuar
 1. Agregar las URLs de la aplicacion del blog al proyecto principal en config/urls.py, para que asi reconozca las urls definidas en la app del blog
 2. Se crea el archivo blog/urls.py para definir las rutas especificas del blog, como la vista principal que muestra los posts publicados.
 3. se crea la vista, una funcion, post_list en blog/views.py que renderiza la plantilla blog/post_list.html para mostrar la lista de posts.
-4. 
+4. se crea la plantilla blog/templates/blog/post_list.html para definir la estructura HTML de la pagina que muestra los posts.
+5. agregar a repo y pushear los cambios realizados desde pythonanywhere
