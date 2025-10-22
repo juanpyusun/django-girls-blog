@@ -1,18 +1,11 @@
-<DOCTYPE html>
-<html lang="es-CO">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog</title>
-</head>
-<body>
+{% extends "blog/base.html" %}
+{% block content %}
     {% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h2><a href="">{{ post.title }}</a></h2>
-        <!-- <p>{{ post.text|truncatewords:30 }}</p> -->
-        <p>{{ post.text|linebreaks}}</p>
-    </div>
+        <article class="post">
+            <time>published: {{ post.published_date }}</time>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <!-- <p>{{ post.text|truncatewords:30 }}</p> -->
+            <p>{{ post.text|linebreaks}}</p>
+        </article>
     {% endfor %}
-</body>
-</html>
+{% endblock %}
