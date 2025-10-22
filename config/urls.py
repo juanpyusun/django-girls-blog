@@ -15,8 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('blog.urls')),  # Incluimos las URLs de la aplicacion del blog, asignandole la ruta raiz '', es decir, cada que alguien entre a "localhost:8000/" se le dirigira a las URLs del blog
 ]

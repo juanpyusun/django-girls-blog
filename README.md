@@ -61,3 +61,7 @@ Este proyecto es un blog basico desarrollado con Django, que permite a los usuar
 
 ## Interfaz Grafica y URLs
 
+1. Agregar las URLs de la aplicacion del blog al proyecto principal en config/urls.py, para que asi reconozca las urls definidas en la app del blog
+2. Se crea el archivo blog/urls.py para definir las rutas especificas del blog, como la vista principal que muestra los posts publicados.
+3. se crea la vista, una funcion, post_list en blog/views.py que renderiza la plantilla blog/post_list.html para mostrar la lista de posts.
+4. 
