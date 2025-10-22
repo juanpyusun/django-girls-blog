@@ -8,6 +8,8 @@
   - [Descripcion del proyecto](#descripcion-del-proyecto)
   - [Despliegue en PythonAnywhere](#despliegue-en-pythonanywhere)
   - [Interfaz Grafica y URLs](#interfaz-grafica-y-urls)
+  - [HTML dinamico y estatico](#html-dinamico-y-estatico)
+  - [ORM de Django](#orm-de-django)
 
 ## Instalacion y configuracion del proyecto
 
@@ -67,3 +69,13 @@ Este proyecto es un blog basico desarrollado con Django, que permite a los usuar
 4. se crea la plantilla blog/templates/blog/post_list.html para definir la estructura HTML de la pagina que muestra los posts.
 5. agregar a repo y pushear los cambios realizados desde pythonanywhere
 6. Se corrigio un error en produccion, donde la ruta de Host permitidos en config/settings.py no estaba bien definida
+
+## HTML dinamico y estatico
+
+Para Django, los archivos estaticos son aquellos que no cambian, como segmentos de HTML, archivos CSS, JavaScript e imagenes. Estos archivos se almacenan en una carpeta llamada 'static' dentro de cada aplicacion o en una carpeta global de estaticos.
+
+Por otro lado, los archivos dinamicos son aquellos que pueden cambiar segun la interaccion del usuario o los datos de la base de datos. Estos archivos se generan en tiempo real por el servidor y se envian al navegador del usuario. En Django, las plantillas HTML son un ejemplo de archivos dinamicos, ya que pueden incluir variables y estructuras de control para mostrar diferentes contenidos segun el contexto.
+
+## ORM de Django
+
+Un ORM (Object-Relational Mapping) es como un traductor entre el lenguaje de programacion y la base de datos. Permite a los desarrolladores interactuar con la base de datos utilizando objetos y metodos en lugar de escribir consultas SQL directamente.
