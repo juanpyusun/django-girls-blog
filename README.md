@@ -66,3 +66,4 @@ Este proyecto es un blog basico desarrollado con Django, que permite a los usuar
 3. se crea la vista, una funcion, post_list en blog/views.py que renderiza la plantilla blog/post_list.html para mostrar la lista de posts.
 4. se crea la plantilla blog/templates/blog/post_list.html para definir la estructura HTML de la pagina que muestra los posts.
 5. agregar a repo y pushear los cambios realizados desde pythonanywhere
+6. Se corrigio un error en produccion, donde la ruta de Host permitidos en config/settings.py no estaba bien definida
