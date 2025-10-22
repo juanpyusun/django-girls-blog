@@ -7,4 +7,5 @@ from . import views
 # que se encuentra en views.py y se le asigna el nombre 'index' para referenciarla facilmente
 urlpatterns = [
     path('', views.index, name='index'),
+    path('post/<int:pk>/', views.post_detail, name='post_detail'),
 ]
